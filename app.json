@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "FitFast",
+    "slug": "fitfast",
+    "privacy": "public",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/fit_fast_logo.png",
+    "description": "",
+    "scheme": "myapp",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#00000"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.fitfast.fitfast",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "versionCode": 1
+    },
+    "packagerOpts": {
+      "sourceExts": [
+        "js",
+        "jsx",
+        "svg",
+        "ts",
+        "tsx",
+        "ttf"
+      ]
+    }
+  },
+  "extra": {
+    "edamamKey": "80fa1b22c1aba89f9bc4f78f6384bf0d",
+    "edamamID": "7e4bb01a"
+  }
+}
