@@ -11,7 +11,7 @@ import {
   Dimensions,
   TouchableOpacity,
 } from "react-native";
-import {Picker} from '@react-native-picker/picker';
+import { Picker } from "@react-native-picker/picker";
 import { Button, Icon } from "react-native-elements";
 import { Feather } from "@expo/vector-icons";
 import { connect } from "react-redux";
@@ -145,12 +145,16 @@ class IngredientConfirmation extends React.Component {
     ];
     return (
       <ScrollView>
-      <View style={styles.outerContainer}>
+        <View style={styles.outerContainer}>
           <ImageBackground
             source={require("../assets/images/fit_fast_background.jpg")}
             style={styles.image}
           >
-          <Image source={require("../assets/images/fit_fast_banner.png")} resizeMode={'cover'} style={styles.banner} />
+            <Image
+              source={require("../assets/images/fit_fast_banner.png")}
+              resizeMode={"cover"}
+              style={styles.banner}
+            />
             <View style={styles.container}>
               {/* ADD DISH NAME + SUBMIT/CONFIRM INGREDIENTS TO REDIRECT TO DISH SCREEN*/}
               <View style={styles.confirmContainer}>
@@ -161,7 +165,7 @@ class IngredientConfirmation extends React.Component {
                 </View>
                 <TextInput
                   style={styles.dishView}
-                  placeholder="i.e. Vegan Pasta Salad"
+                  placeholder='i.e. Vegan Pasta Salad'
                   value={this.state.name}
                   onChangeText={(text) => {
                     let localStateDish = { ...this.state };
@@ -179,7 +183,7 @@ class IngredientConfirmation extends React.Component {
                   <View style={styles.innerIngredientContainer}>
                     <Button
                       onPress={this.clearAll}
-                      title="Clear All"
+                      title='Clear All'
                       titleStyle={{
                         color: "black",
                         fontSize: 11,
@@ -205,7 +209,7 @@ class IngredientConfirmation extends React.Component {
                             </Text>
                             <TextInput
                               style={styles.quantityField}
-                              placeholder="Enter A Numerical Value"
+                              placeholder='Enter A Numerical Value'
                               value={item.quantity}
                               onChangeText={(text) => {
                                 let localStateClone = { ...this.state };
@@ -217,8 +221,13 @@ class IngredientConfirmation extends React.Component {
                             />
                             <View>
                               <Picker
-                                style={{flex:1, padding: 0, margin: 0, width: 90}}
-                                mode='dropdown'                              
+                                style={{
+                                  flex: 1,
+                                  padding: 0,
+                                  margin: 0,
+                                  width: 90,
+                                }}
+                                mode='dropdown'
                                 itemStyle={styles.dropdowns}
                                 selectedValue={item.measurement}
                                 onValueChange={(value) => {
@@ -232,7 +241,7 @@ class IngredientConfirmation extends React.Component {
                                 {quantTypes.map((cateogry, index) => {
                                   return (
                                     <Picker.Item
-                                      style={{ width: 50}}
+                                      style={{ width: 50 }}
                                       key={index}
                                       label={cateogry.value}
                                       value={cateogry.value}
@@ -241,19 +250,19 @@ class IngredientConfirmation extends React.Component {
                                 })}
                               </Picker>
                               {/* <View style={styles.icon}>
-                                <Feather
-                                  name="chevrons-down"
-                                  size={15}
-                                  color="black"
-                                />
-                              </View> */}
+            <Feather
+              name="chevrons-down"
+              size={15}
+              color="black"
+            />
+          </View> */}
                             </View>
                             <View style={styles.removeButton}>
                               <Button
                                 onPress={() => {
                                   this.removeIngredient(index);
                                 }}
-                                title="X"
+                                title='X'
                                 titleStyle={{
                                   color: "white",
                                   fontSize: 13,
@@ -271,7 +280,6 @@ class IngredientConfirmation extends React.Component {
                           </View>
                         );
                       })}
-
                       {this.state.userAddedIngredients.map((item, index) => {
                         return (
                           <View
@@ -283,7 +291,7 @@ class IngredientConfirmation extends React.Component {
                             </Text>
                             <TextInput
                               style={styles.quantityField}
-                              placeholder="Enter A Numerical Value"
+                              placeholder='Enter A Numerical Value'
                               value={item.quantity}
                               onChangeText={(text) => {
                                 let localUserAddedStateClone = {
@@ -297,8 +305,13 @@ class IngredientConfirmation extends React.Component {
                             />
                             <View>
                               <Picker
-                                style={{flex:1, padding: 0, margin: 0, width: 90}}
-                                mode='dropdown'                              
+                                style={{
+                                  flex: 1,
+                                  padding: 0,
+                                  margin: 0,
+                                  width: 90,
+                                }}
+                                mode='dropdown'
                                 itemStyle={styles.dropdowns}
                                 selectedValue={item.measurement}
                                 onValueChange={(value) => {
@@ -312,7 +325,7 @@ class IngredientConfirmation extends React.Component {
                                 {quantTypes.map((cateogry, index) => {
                                   return (
                                     <Picker.Item
-                                      style={{ width: 50}}
+                                      style={{ width: 50 }}
                                       key={index}
                                       label={cateogry.value}
                                       value={cateogry.value}
@@ -333,7 +346,7 @@ class IngredientConfirmation extends React.Component {
                                 onPress={() => {
                                   this.removeUserAddedItem(index);
                                 }}
-                                title="X"
+                                title='X'
                                 titleStyle={{
                                   color: "white",
                                   fontSize: 13,
@@ -366,13 +379,13 @@ class IngredientConfirmation extends React.Component {
                 <View style={styles.ingredientView}>
                   <TextInput
                     style={styles.ingredientInput}
-                    placeholder="Your Ingredient"
+                    placeholder='Your Ingredient'
                     defaultValue={this.state.value}
                     onChangeText={this.handleChangeText}
                   />
                   <TextInput
                     style={styles.quantityField}
-                    placeholder="Qty"
+                    placeholder='Qty'
                     value={this.state.qty}
                     onChangeText={(text) => {
                       let localStateClone = { ...this.state };
@@ -382,8 +395,8 @@ class IngredientConfirmation extends React.Component {
                   />
                   <View>
                     <Picker
-                      style={{flex:1, padding: 0, margin: 0, width: 90}}
-                      mode='dropdown'                    
+                      style={{ flex: 1, padding: 0, margin: 0, width: 90 }}
+                      mode='dropdown'
                       itemStyle={styles.dropdowns}
                       selectedValue={this.state.measurement}
                       onValueChange={(value) => {
@@ -395,7 +408,7 @@ class IngredientConfirmation extends React.Component {
                       {quantTypes.map((cateogry, index) => {
                         return (
                           <Picker.Item
-                            style={{ width: 50}}
+                            style={{ width: 50 }}
                             key={index}
                             label={cateogry.value}
                             value={cateogry.value}
@@ -427,7 +440,7 @@ class IngredientConfirmation extends React.Component {
                       fontSize: 15,
                       lineHeight: 15,
                       fontFamily: "cabin",
-                      textAlign: 'center'
+                      textAlign: "center",
                     }}
                   >
                     Add to Ingredients
@@ -455,7 +468,7 @@ class IngredientConfirmation extends React.Component {
                       fontSize: 15,
                       lineHeight: 15,
                       fontFamily: "cabin",
-                      textAlign: 'center'
+                      textAlign: "center",
                     }}
                   >
                     All Set! Get Me Nutritional Information
@@ -497,9 +510,9 @@ const height = Dimensions.get("window").height;
 const width = Dimensions.get("window").width;
 
 const styles = StyleSheet.create({
-  banner:{ 
-    width: '100%', 
-    height: 75, 
+  banner: {
+    width: "100%",
+    height: 75,
   },
   outerContainer: {
     backgroundColor: "black",
@@ -521,21 +534,21 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#FFFFFF80",
     opacity: 1,
-    height:800,
-    width: 370,
+    height: 800,
+    width: "90%",
     borderRadius: 10,
     marginTop: 25,
   },
   confirmContainer: {
     borderRadius: 10,
-    width: 350,
+    width: "90%",
     backgroundColor: "white",
     marginTop: 20,
     marginBottom: 10,
   },
   ingredientsContainer: {
     borderRadius: 10,
-    width: 350,
+    width: "90%",
     height: 380,
     backgroundColor: "white",
     margin: 10,
@@ -559,7 +572,7 @@ const styles = StyleSheet.create({
   },
   missingContainer: {
     borderRadius: 10,
-    width: 350,
+    width: "90%",
     backgroundColor: "white",
     margin: 10,
   },
@@ -578,13 +591,13 @@ const styles = StyleSheet.create({
     fontFamily: "cabin",
   },
   ingredientName: {
-    width: 165,
+    width: "45%",
     padding: 3,
     fontSize: 15,
     fontFamily: "cabin",
   },
   ingredientInput: {
-    width: 185,
+    width: "60%",
     borderWidth: 0.5,
     borderColor: "#d6d7da",
     padding: 3,
@@ -615,7 +628,7 @@ const styles = StyleSheet.create({
     borderTopRightRadius: 10,
   },
   quantityField: {
-    width: 50,
+    width: "10%",
     height: 38.2,
     borderWidth: 0.5,
     borderColor: "#d6d7da",
@@ -626,7 +639,7 @@ const styles = StyleSheet.create({
   },
   dropdowns: {
     height: 39,
-    width: 80,
+    width: "80%",
     fontSize: 16,
     color: "black",
     backgroundColor: "#FFFFFF",

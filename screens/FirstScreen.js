@@ -1,11 +1,12 @@
 import * as React from 'react';
+import { ScrollView } from 'react-native';
 import {
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
   Image,
-  ImageBackground,
+  ImageBackground,Dimensions
 } from 'react-native';
 import { Button } from 'react-native-elements';
 
@@ -83,15 +84,21 @@ export default class FirstScreen extends React.Component {
   }
 }
 
+
+const height = Dimensions.get("window").height;
+const width = Dimensions.get("window").width;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
     flexDirection: 'column',
+    width: width,
+    height:height
   },
   logo:{
-    width: 250,
-    height: 250,
+    width: width/2,
+    height: width/2,
     marginTop: 100
   },
   image: {

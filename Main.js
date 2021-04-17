@@ -1,6 +1,6 @@
 import * as React from "react";
 import { connect } from "react-redux";
-import { Platform, StatusBar, StyleSheet, View, Button } from "react-native";
+import { Platform, StatusBar, StyleSheet, View, Button, useWindowDimensions,ScrollView } from "react-native";
 import * as SplashScreen from "expo-splash-screen";
 import * as Font from "expo-font";
 import { Ionicons } from "@expo/vector-icons";
@@ -121,7 +121,6 @@ function Main(props) {
     );
   }
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,

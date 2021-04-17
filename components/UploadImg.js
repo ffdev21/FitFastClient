@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   Image,
   ImageBackground,
+  Dimensions
 } from "react-native";
 import * as ImagePicker from "expo-image-picker";
 import Constants from "expo-constants";
@@ -165,6 +166,10 @@ const mapDispatch = (dispatch) => ({
 
 export default connect(null, mapDispatch)(UploadImg);
 
+
+const height = Dimensions.get("window").height;
+const width = Dimensions.get("window").width;
+
 const styles = StyleSheet.create({
   banner:{ 
     width: '100%', 
@@ -175,10 +180,11 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: "#ffffff",
     borderRadius: 10,
-    width: 350,
-    height: 500,
+    width: '90%',
+    height: '70%',
     alignItems: "center",
     justifyContent: "center",
+    marginTop: '30%'
   },
   uploadButtons: {
     flexDirection: "column",
@@ -229,8 +235,8 @@ const styles = StyleSheet.create({
   },
   dishimage: {
     marginTop: 17,
-    width: 250,
-    height: 250,
+    width: width/2,
+    height: width/2,
     borderRadius: 5,
     overflow: "hidden",
     borderRadius: 8,

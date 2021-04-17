@@ -1,4 +1,5 @@
 import React from "react";
+import { ScrollView } from 'react-native';
 import { StyleSheet, View, Text } from "react-native";
 import { Overlay, Button } from "react-native-elements";
 
@@ -11,7 +12,7 @@ const WorkoutDebtModal = (props) => {
       animationType={"fade"}
       overlayBackgroundColor={"white"}
     >
-    <View>
+    <ScrollView>
       {props.workoutDebtInfo.workoutCalculations.totalWorkoutTime === "0.00" ? (
         <View>
           <Text style={styles.noWorkouts}>
@@ -110,7 +111,7 @@ const WorkoutDebtModal = (props) => {
         }}
         onPress={props.handleCancel}
       />
-      </View>
+      </ScrollView>
     </Overlay>
   );
 };
@@ -128,7 +129,7 @@ const styles = StyleSheet.create({
   },
   mealContainer: {
     borderRadius: 10,
-    width: 350,
+    width: '95%',
     backgroundColor: "#faefe8",
     margin: 7,
   },

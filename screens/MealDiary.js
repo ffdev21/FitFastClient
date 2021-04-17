@@ -400,7 +400,7 @@ const styles = StyleSheet.create({
   },
   outerContainer: {
     backgroundColor: "#ECECEC",
-    height: height + 250,
+    height: height + 450,
     width: width,
     alignItems: "center",
     flex: 1,
@@ -409,7 +409,7 @@ const styles = StyleSheet.create({
   date: {},
   mealContainer: {
     borderRadius: 10,
-    width: 350,
+    width: '90%',
     backgroundColor: "#ffffff90",
     margin: 7,
   },

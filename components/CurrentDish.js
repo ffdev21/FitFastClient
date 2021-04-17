@@ -233,7 +233,7 @@ const styles = StyleSheet.create({
     marginLeft: 9,
     marginRight: 11,
     marginBottom: 10,
-    width: 350,
+    width: '100%',
     color: '#696969',
   },
   pieGraphContainer: {
@@ -241,9 +241,10 @@ const styles = StyleSheet.create({
   },
   pieGraph: {
     flexDirection: 'row',
+    width: '20%'
   },
   barGraph: {
     marginBottom: 15,
-    width: 500,
+    width: '95%',
   },
 });

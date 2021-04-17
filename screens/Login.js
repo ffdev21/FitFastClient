@@ -5,7 +5,7 @@ import {
   ImageBackground,
   Image,
   Text,
-  TextInput,
+  TextInput,Dimensions
 } from "react-native";
 import { Button } from "react-native-elements";
 import { connect } from "react-redux";
@@ -13,6 +13,7 @@ import { StackActions } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
 import PasswordInputText from "react-native-hide-show-password-input";
 import { login } from "../store/user";
+import { ScrollView } from 'react-native';
 
 class Login extends React.Component {
   constructor({ navigation }) {
@@ -133,6 +134,9 @@ class Login extends React.Component {
   }
 }
 
+const height = Dimensions.get("window").height;
+const width = Dimensions.get("window").width;
+
 const styles = StyleSheet.create({
   background: {
     flex: 1,
@@ -141,21 +145,21 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    width: "100%",
-    height: "100%",
+    width:'100%',
+    height: '100%',
     justifyContent: 'flex-start',
     alignItems: "center",
   },
   logo:{
-    width: 250,
-    height: 250,
-    marginTop: 100
+    width: width/2,
+    height: width/2,
+    marginTop: width/5
   },
   loginBox: {
     marginTop: 50,
     padding: 10,
     backgroundColor: "rgba(255, 255, 255, 0.6)",
-    width: 350,
+    width: '85%',
     height: 290,
     borderRadius: 30,
     alignItems: "center",
@@ -164,7 +168,7 @@ const styles = StyleSheet.create({
   emailContainer: {
     flexDirection: "row",
     backgroundColor: "white",
-    width: 330,
+    width: '95%',
     height: 75,
     padding: 5,
     marginTop: 5,
@@ -182,7 +186,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   emailInput: {
-    width: 250,
+    width: '100%',
     fontFamily: "cabin",
     fontSize: 17,
     paddingBottom: 4,
@@ -192,7 +196,7 @@ const styles = StyleSheet.create({
   passwordContainer: {
     flexDirection: "row",
     backgroundColor: "white",
-    width: 330,
+    width: '95%',
     height: 75,
     padding: 5,
     marginTop: 9,
@@ -211,7 +215,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     marginLeft: 5,
     height: 20,
-    width: 250,
+    width: '100%',
     fontSize: 17,
 
     fontFamily: "cabin",

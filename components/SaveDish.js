@@ -44,7 +44,7 @@ const SaveDish = (props) => {
               <View style={styles.mealTypeContainer}>
                 <Text style={styles.headerText}>Meal Type: </Text>
                 <Picker
-                  style={{ padding: 0, margin: 0, width: 150, height: 50}}
+                  style={{ padding: 0, margin: 0, width: '50%', height: 50}}
                   mode='dropdown'
                   itemStyle={styles.dropdown}
                   selectedValue={formikProps.values.mealType}
@@ -115,7 +115,7 @@ export default SaveDish;
 
 const styles = StyleSheet.create({
   text: {
-    width: 180,
+    width: '50%',
     opacity: 0.8,
     backgroundColor: "#FFFFFF",
     padding: 8,
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#FFFFFF",
     opacity: 1,
-    height: 850,
+    height: '90%',
     width: 350,
     borderRadius: 10,
     marginTop: 30,
@@ -152,9 +152,9 @@ const styles = StyleSheet.create({
   },
   mealTypeContainer: {
     flexDirection: "row",
-    justifyContent: "flex-start",
+    justifyContent: "center",
     alignItems: "center",
-    width: "95%",
+    width: "100%",
     flex: 1,
   },
   buttonContainer: {
@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
   },
   dropdown: {
     height: 39,
-    width: 163,
+    width: '100%',
     fontSize: 14,
     color: "black",
     backgroundColor: "#FFFFFF",

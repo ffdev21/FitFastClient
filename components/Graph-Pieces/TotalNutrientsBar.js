@@ -41,7 +41,7 @@ export default class TotalNutrientsBar extends React.PureComponent {
           svg={{ fontSize: 10, fill: 'black' }}
         />
         <StackedBarChart
-          style={{ height: 900, width: 300, marginRight: 50 }}
+          style={{ height: 900, width: '80%', marginRight: 50 }}
           keys={keys}
           colors={colors}
           data={data}
